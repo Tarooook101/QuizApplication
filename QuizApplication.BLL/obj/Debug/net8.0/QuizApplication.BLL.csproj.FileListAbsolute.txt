@@ -1,0 +1,15 @@
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\bin\Debug\net8.0\QuizApplication.BLL.deps.json
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\bin\Debug\net8.0\QuizApplication.BLL.dll
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\bin\Debug\net8.0\QuizApplication.BLL.pdb
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\bin\Debug\net8.0\QuizApplication.DAL.dll
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\bin\Debug\net8.0\QuizApplication.DAL.pdb
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\QuizApplication.BLL.csproj.AssemblyReference.cache
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\QuizApplication.BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\QuizApplication.BLL.AssemblyInfoInputs.cache
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\QuizApplication.BLL.AssemblyInfo.cs
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\QuizApplication.BLL.csproj.CoreCompileInputs.cache
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\QuizAppl.59436E79.Up2Date
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\QuizApplication.BLL.dll
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\refint\QuizApplication.BLL.dll
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\QuizApplication.BLL.pdb
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\ref\QuizApplication.BLL.dll

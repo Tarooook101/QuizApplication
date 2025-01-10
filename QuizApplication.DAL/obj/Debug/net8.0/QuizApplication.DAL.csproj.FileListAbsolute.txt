@@ -1,0 +1,14 @@
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\bin\Debug\net8.0\QuizApplication.DAL.deps.json
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\bin\Debug\net8.0\QuizApplication.DAL.dll
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\bin\Debug\net8.0\QuizApplication.DAL.pdb
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\QuizApplication.DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\QuizApplication.DAL.AssemblyInfoInputs.cache
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\QuizApplication.DAL.AssemblyInfo.cs
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\QuizApplication.DAL.csproj.CoreCompileInputs.cache
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\QuizApplication.DAL.dll
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\refint\QuizApplication.DAL.dll
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\QuizApplication.DAL.pdb
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\ref\QuizApplication.DAL.dll
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\bin\Debug\net8.0\QuizApplication.DAL.runtimeconfig.json
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\QuizApplication.DAL.csproj.AssemblyReference.cache
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\QuizApplication.DAL.genruntimeconfig.cache
