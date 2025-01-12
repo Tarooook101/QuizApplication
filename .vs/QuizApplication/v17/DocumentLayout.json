@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\CV_Projects\\QuizApplication\\QuizApplication\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB221F3F-D7B3-4D9E-9451-4DA630DFE588}|QuizApplication.API\\QuizApplication.API.csproj|f:\\cv_projects\\quizapplication\\quizapplication\\quizapplication.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DB221F3F-D7B3-4D9E-9451-4DA630DFE588}|QuizApplication.API\\QuizApplication.API.csproj|solutionrelative:quizapplication.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +27,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\CV_Projects\\QuizApplication\\QuizApplication\\QuizApplication.API\\appsettings.json",
+              "RelativeDocumentMoniker": "QuizApplication.API\\appsettings.json",
+              "ToolTip": "F:\\CV_Projects\\QuizApplication\\QuizApplication\\QuizApplication.API\\appsettings.json",
+              "RelativeToolTip": "QuizApplication.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-12T17:24:34.238Z",
+              "EditorCaption": ""
             }
           ]
         }
