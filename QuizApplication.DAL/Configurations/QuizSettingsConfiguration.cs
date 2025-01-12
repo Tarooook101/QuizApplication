@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuizApplication.DAL.Common;
 
 namespace QuizApplication.DAL.Configurations
 {
@@ -16,7 +17,9 @@ namespace QuizApplication.DAL.Configurations
             builder.ToTable("QuizSettings");
 
             builder.Property(qs => qs.CustomSettings)
-                .HasColumnType("jsonb");  // Using JSON storage for the custom settings dictionary
+                .HasColumnType("nvarchar(max)")
+                .HasConversion(JsonValueConverter.DictionaryStringConverter)
+                .Metadata.SetValueComparer(JsonValueConverter.DictionaryComparer);
 
             builder.HasOne(qs => qs.Quiz)
                 .WithOne(q => q.Settings)

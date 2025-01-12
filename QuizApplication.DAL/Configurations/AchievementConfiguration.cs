@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuizApplication.DAL.Common;
 
 namespace QuizApplication.DAL.Configurations
 {
@@ -28,7 +29,9 @@ namespace QuizApplication.DAL.Configurations
                 .IsRequired();
 
             builder.Property(a => a.Criteria)
-                .HasColumnType("jsonb");  // Using JSON storage for the criteria dictionary
+                .HasColumnType("nvarchar(max)")
+                .HasConversion(JsonValueConverter.DictionaryStringConverter)
+                .Metadata.SetValueComparer(JsonValueConverter.DictionaryComparer);
 
             builder.HasMany(a => a.UserAchievements)
                 .WithOne(ua => ua.Achievement)

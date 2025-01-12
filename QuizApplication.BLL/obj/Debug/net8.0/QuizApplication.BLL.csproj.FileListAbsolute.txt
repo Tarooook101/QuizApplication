@@ -13,3 +13,4 @@ F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net
 F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\refint\QuizApplication.BLL.dll
 F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\QuizApplication.BLL.pdb
 F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\ref\QuizApplication.BLL.dll
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.BLL\obj\Debug\net8.0\QuizApplication.BLL.sourcelink.json

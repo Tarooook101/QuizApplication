@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuizApplication.DAL.Common;
 
 namespace QuizApplication.DAL.Configurations
 {
@@ -25,7 +26,9 @@ namespace QuizApplication.DAL.Configurations
                 .HasMaxLength(500);
 
             builder.Property(qm => qm.CustomMetadata)
-                .HasColumnType("jsonb");  // Using JSON storage for the custom metadata dictionary
+                .HasColumnType("nvarchar(max)")
+                .HasConversion(JsonValueConverter.DictionaryStringConverter)
+                .Metadata.SetValueComparer(JsonValueConverter.DictionaryComparer);
 
             builder.HasOne(qm => qm.Question)
                 .WithOne(q => q.Metadata)

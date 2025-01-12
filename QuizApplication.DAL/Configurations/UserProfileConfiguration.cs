@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuizApplication.DAL.Common;
 
 namespace QuizApplication.DAL.Configurations
 {
@@ -27,10 +28,14 @@ namespace QuizApplication.DAL.Configurations
                 .HasMaxLength(1000);
 
             builder.Property(up => up.CustomSettings)
-                .HasColumnType("jsonb");  // Using JSON storage for the custom settings dictionary
+                .HasColumnType("nvarchar(max)")
+                .HasConversion(JsonValueConverter.DictionaryStringConverter)
+                .Metadata.SetValueComparer(JsonValueConverter.DictionaryComparer);
 
             builder.Property(up => up.NotificationPreferences)
-                .HasColumnType("jsonb");  // Store NotificationPreferences as JSON
+                .HasColumnType("nvarchar(max)")
+                .HasConversion(JsonValueConverter.Create<NotificationPreferences>())
+                .Metadata.SetValueComparer(JsonValueConverter.CreateComparer<NotificationPreferences>());
 
             builder.HasOne(up => up.User)
                 .WithOne(u => u.Profile)

@@ -12,3 +12,4 @@ F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net
 F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\bin\Debug\net8.0\QuizApplication.DAL.runtimeconfig.json
 F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\QuizApplication.DAL.csproj.AssemblyReference.cache
 F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\QuizApplication.DAL.genruntimeconfig.cache
+F:\CV_Projects\QuizApplication\QuizApplication\QuizApplication.DAL\obj\Debug\net8.0\QuizApplication.DAL.sourcelink.json

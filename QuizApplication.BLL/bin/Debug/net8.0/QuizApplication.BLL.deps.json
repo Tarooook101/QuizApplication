@@ -9,6 +9,7 @@
       "QuizApplication.BLL/1.0.0": {
         "dependencies": {
           "MediatR": "12.4.1",
+          "Microsoft.AspNetCore.WebUtilities": "8.0.11",
           "QuizApplication.DAL": "1.0.0"
         },
         "runtime": {
@@ -97,6 +98,18 @@
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
             "assemblyVersion": "8.0.11.0",
+            "fileVersion": "8.0.1124.52116"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.WebUtilities/8.0.11": {
+        "dependencies": {
+          "Microsoft.Net.Http.Headers": "8.0.11",
+          "System.IO.Pipelines": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.WebUtilities.dll": {
+            "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.1124.52116"
           }
         }
@@ -439,6 +452,17 @@
           }
         }
       },
+      "Microsoft.Net.Http.Headers/8.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Net.Http.Headers.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.1124.52116"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.SqlServer.Server/1.0.0": {
@@ -529,6 +553,14 @@
           "lib/net6.0/System.IdentityModel.Tokens.Jwt.dll": {
             "assemblyVersion": "6.35.0.0",
             "fileVersion": "6.35.0.41201"
+          }
+        }
+      },
+      "System.IO.Pipelines/8.0.0": {
+        "runtime": {
+          "lib/net8.0/System.IO.Pipelines.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
           }
         }
       },
@@ -711,6 +743,13 @@
       "sha512": "sha512-AR87eq0J3pqRPcqJUe9f5xLj8FoXxpakyjSDwvVQXWd6ClzFLQ+GPksCM009tpi6WJZblZ7qud5UZFj421UYTg==",
       "path": "microsoft.aspnetcore.identity.entityframeworkcore/8.0.11",
       "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.8.0.11.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.WebUtilities/8.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t7jUceCajjwPBwOEk0xcqQEg/VL28kYVzP9ikm2jFRiHEtID+0gIv8HQgAsEJ0PlOPjOp9ZJ5QJgt1NCIQL+Sg==",
+      "path": "microsoft.aspnetcore.webutilities/8.0.11",
+      "hashPath": "microsoft.aspnetcore.webutilities.8.0.11.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
@@ -908,6 +947,13 @@
       "path": "microsoft.identitymodel.tokens/6.35.0",
       "hashPath": "microsoft.identitymodel.tokens.6.35.0.nupkg.sha512"
     },
+    "Microsoft.Net.Http.Headers/8.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZhNvk0bpW8hdWCsu6aFtsKVSNlGZ5STVjuF7Ij3Y9/DvDrOOneVQYbyNZ58nHTwSVSMbxZ5pZ0PhIdFiBp7b4Q==",
+      "path": "microsoft.net.http.headers/8.0.11",
+      "hashPath": "microsoft.net.http.headers.8.0.11.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -977,6 +1023,13 @@
       "sha512": "sha512-yxGIQd3BFK7F6S62/7RdZk3C/mfwyVxvh6ngd1VYMBmbJ1YZZA9+Ku6suylVtso0FjI0wbElpJ0d27CdsyLpBQ==",
       "path": "system.identitymodel.tokens.jwt/6.35.0",
       "hashPath": "system.identitymodel.tokens.jwt.6.35.0.nupkg.sha512"
+    },
+    "System.IO.Pipelines/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FHNOatmUq0sqJOkTx+UF/9YK1f180cnW5FVqnQMvYUN0elp6wFzbtPSiqbo1/ru8ICp43JM1i7kKkk6GsNGHlA==",
+      "path": "system.io.pipelines/8.0.0",
+      "hashPath": "system.io.pipelines.8.0.0.nupkg.sha512"
     },
     "System.Memory/4.5.4": {
       "type": "package",

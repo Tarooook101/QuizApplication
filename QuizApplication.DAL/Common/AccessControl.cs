@@ -8,10 +8,13 @@ namespace QuizApplication.DAL.Common
 {
     public record AccessControl
     {
+        private HashSet<string> _allowedUserIds = new();
+        private HashSet<string> _allowedRoles = new();
+
         public bool IsPublic { get; init; }
         public string? AccessCode { get; init; }
-        private HashSet<string> AllowedUserIds { get; init; } = new();
-        private HashSet<string> AllowedRoles { get; init; } = new();
+        public IReadOnlySet<string> AllowedUserIds => _allowedUserIds;
+        public IReadOnlySet<string> AllowedRoles => _allowedRoles;
         public DateTimeOffset? ExpiryDate { get; init; }
 
         public bool HasAccess(string userId, IEnumerable<string>? userRoles = null)
@@ -19,11 +22,11 @@ namespace QuizApplication.DAL.Common
             if (IsPublic) return true;
             if (ExpiryDate.HasValue && ExpiryDate.Value < DateTimeOffset.UtcNow) return false;
 
-            return AllowedUserIds.Contains(userId) ||
-                   (userRoles?.Any(role => AllowedRoles.Contains(role)) ?? false);
+            return _allowedUserIds.Contains(userId) ||
+                   (userRoles?.Any(role => _allowedRoles.Contains(role)) ?? false);
         }
 
-        public void AddAllowedUser(string userId) => AllowedUserIds.Add(userId);
-        public void AddAllowedRole(string role) => AllowedRoles.Add(role);
+        public void AddAllowedUser(string userId) => _allowedUserIds.Add(userId);
+        public void AddAllowedRole(string role) => _allowedRoles.Add(role);
     }
 }

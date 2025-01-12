@@ -59,7 +59,8 @@ namespace QuizApplication.DAL.Common
         Inactive,
         Suspended,
         PendingVerification,
-        Archived
+        Archived,
+        Pending
     }
 
     public enum QuestionDifficulty

@@ -23,6 +23,25 @@ namespace QuizApplication.DAL.Configurations
                 .HasMaxLength(2000)
                 .IsRequired();
 
+            builder.Property(q => q.DurationMinutes)
+                .IsRequired();
+
+            builder.Property(q => q.TimeBetweenAttemptsMinutes)
+                .IsRequired(false);
+
+            // Configure AccessControl as a converted property
+            builder.Property("_accessControlJson")
+                .HasColumnName("AccessControl")
+                .HasColumnType("nvarchar(max)")
+                .IsRequired();
+
+            // Ignore the actual AccessControl property as it's handled through the backing field
+            builder.Ignore(q => q.AccessControl);
+
+            // Ignore computed TimeSpan properties
+            builder.Ignore(q => q.Duration);
+            builder.Ignore(q => q.TimeBetweenAttempts);
+
             builder.HasMany(q => q.Questions)
                 .WithOne(q => q.Quiz)
                 .HasForeignKey(q => q.QuizId)

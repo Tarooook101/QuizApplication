@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace QuizApplication.DAL.Entities
@@ -13,7 +14,7 @@ namespace QuizApplication.DAL.Entities
 
         public required string Title { get; set; }
         public required string Description { get; set; }
-        public TimeSpan Duration { get; set; }
+        public int DurationMinutes { get; set; }  // Changed from TimeSpan to int
         public DateTimeOffset StartDate { get; set; }
         public DateTimeOffset? EndDate { get; set; }
         public QuizStatus Status { get; set; }
@@ -22,17 +23,22 @@ namespace QuizApplication.DAL.Entities
         public bool ShuffleQuestions { get; set; }
         public bool ShowResults { get; set; }
         public int MaxAttempts { get; set; } = DEFAULT_MAX_ATTEMPTS;
-        public TimeSpan? TimeBetweenAttempts { get; set; }
+        public int? TimeBetweenAttemptsMinutes { get; set; }  // Changed from TimeSpan to int?
 
-        // Encapsulated AccessControl as a value object
-        private AccessControl _accessControl = new();
+        private string _accessControlJson = JsonSerializer.Serialize(new AccessControl());
+        private AccessControl? _accessControl;
+
         public AccessControl AccessControl
         {
-            get => _accessControl;
-            set => _accessControl = value ?? new AccessControl();
+            get => _accessControl ??= JsonSerializer.Deserialize<AccessControl>(_accessControlJson) ?? new AccessControl();
+            set
+            {
+                _accessControl = value;
+                _accessControlJson = JsonSerializer.Serialize(value);
+            }
         }
 
-        // Navigation properties
+        // Navigation properties remain the same
         public required string CreatedById { get; set; }
         public virtual ApplicationUser CreatedBy { get; set; } = null!;
         public virtual ICollection<Question> Questions { get; set; } = new HashSet<Question>();
@@ -50,6 +56,13 @@ namespace QuizApplication.DAL.Entities
             IsActive &&
             attemptCount < MaxAttempts &&
             AccessControl.HasAccess(userId);
+
+        // Helper methods for TimeSpan conversion
+        public TimeSpan Duration => TimeSpan.FromMinutes(DurationMinutes);
+        public TimeSpan? TimeBetweenAttempts => TimeBetweenAttemptsMinutes.HasValue
+            ? TimeSpan.FromMinutes(TimeBetweenAttemptsMinutes.Value)
+            : null;
     }
+
 
 }
