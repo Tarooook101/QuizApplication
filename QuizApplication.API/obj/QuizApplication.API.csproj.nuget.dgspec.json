@@ -31,6 +31,9 @@
             "projectReferences": {
               "F:\\CV_Projects\\QuizApplication\\QuizApplication\\QuizApplication.BLL\\QuizApplication.BLL.csproj": {
                 "projectPath": "F:\\CV_Projects\\QuizApplication\\QuizApplication\\QuizApplication.BLL\\QuizApplication.BLL.csproj"
+              },
+              "F:\\CV_Projects\\QuizApplication\\QuizApplication\\QuizApplication.DAL\\QuizApplication.DAL.csproj": {
+                "projectPath": "F:\\CV_Projects\\QuizApplication\\QuizApplication\\QuizApplication.DAL\\QuizApplication.DAL.csproj"
               }
             }
           }

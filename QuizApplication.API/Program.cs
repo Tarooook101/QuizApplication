@@ -10,6 +10,8 @@ using QuizApplication.DAL.Database;
 using QuizApplication.DAL.Entities;
 using QuizApplication.DAL.Interfaces;
 using QuizApplication.DAL.Repositories;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Reflection;
 using System.Text;
 using System.Text.Json.Serialization;
 
@@ -77,8 +79,10 @@ namespace QuizApplication.API
             builder.Services.AddControllers()
                 .AddJsonOptions(options =>
                 {
-                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                    //*******************************
                     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+                    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
                 });
 
             // Register Services
@@ -120,6 +124,16 @@ namespace QuizApplication.API
                     Scheme = "bearer"
                 });
 
+
+                ///************************
+                options.CustomSchemaIds(type => type.FullName?.Replace("+", "_"));
+                // Handle circular references
+                options.CustomOperationIds(apiDesc =>
+                {
+                    return apiDesc.TryGetMethodInfo(out MethodInfo methodInfo) ? methodInfo.Name : null;
+                });
+
+
                 options.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {
@@ -156,6 +170,7 @@ namespace QuizApplication.API
             // Register Repositories
             services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
             services.AddScoped<IQuizRepository, QuizRepository>();
+            services.AddScoped<IQuizTagRepository, QuizTagRepository>();
             services.AddScoped<IQuestionRepository, QuestionRepository>();
             services.AddScoped<IQuizAttemptRepository, QuizAttemptRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
@@ -163,6 +178,12 @@ namespace QuizApplication.API
             services.AddScoped<IUserProfileRepository, UserProfileRepository>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IAuthService, AuthService>();
+
+            services.AddLogging(builder =>
+            {
+                builder.AddConsole();
+                builder.AddDebug();
+            });
         }
 
         private static async Task ConfigurePipeline(WebApplication app)

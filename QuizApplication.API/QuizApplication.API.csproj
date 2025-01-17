@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QuizApplication.BLL\QuizApplication.BLL.csproj" />
+    <ProjectReference Include="..\QuizApplication.DAL\QuizApplication.DAL.csproj" />
   </ItemGroup>
 
 </Project>

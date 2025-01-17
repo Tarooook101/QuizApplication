@@ -13,7 +13,7 @@ namespace QuizApplication.API.Controllers
     /// <summary>
     /// Controller for managing categories in the Quiz Application
     /// </summary>
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [Route("api/[controller]")]
     [Produces(MediaTypeNames.Application.Json)]
@@ -155,7 +155,7 @@ namespace QuizApplication.API.Controllers
         /// <param name="cancellationToken">Cancellation token</param>
         /// <returns>Created category</returns>
         [HttpPost]
-        [Authorize(Roles = "Administrator,ContentCreator")]
+        //[Authorize(Roles = "Administrator,ContentCreator")]
         [ProducesResponseType(typeof(Category), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
@@ -206,7 +206,7 @@ namespace QuizApplication.API.Controllers
         /// <param name="cancellationToken">Cancellation token</param>
         /// <returns>No content</returns>
         [HttpPut("{id:int}")]
-        [Authorize(Roles = "Administrator,ContentCreator")]
+        //[Authorize(Roles = "Administrator,ContentCreator")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
@@ -250,7 +250,7 @@ namespace QuizApplication.API.Controllers
         /// <param name="cancellationToken">Cancellation token</param>
         /// <returns>No content</returns>
         [HttpDelete("{id:int}")]
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
