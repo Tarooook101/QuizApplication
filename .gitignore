@@ -1,0 +1,134 @@
+### General OS files ###
+.DS_Store
+Thumbs.db
+desktop.ini
+
+### Visual Studio ###
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.njsproj
+*.swp
+*.swo
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+### Build Outputs ###
+bin/
+obj/
+[Bb]uild/
+[Bb]uildArtifacts/
+out/
+dist/
+publish/
+*.msi
+*.nupkg
+
+### Packages ###
+packages/
+*.nupkg
+*.snupkg
+
+### Logs ###
+*.log
+*.log.*
+logs/
+Logs/
+
+### Database ###
+*.mdf
+*.ldf
+*.sdf
+App_Data/
+
+### Node.js ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnp.*
+.cache/
+
+### React ###
+.eslintcache
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+build/
+dist/
+*.css.map
+*.js.map
+
+### ASP.NET Core ###
+appsettings.Development.json
+appsettings.local.json
+appsettings.*.json
+appsettings.private.json
+secrets.json
+Properties/launchSettings.json
+*.db
+*.sqlite3
+__pycache__/
+
+### Rider ###
+.idea/
+*.sln.iml
+*.DotSettings.user
+
+### Docker ###
+docker-compose.*.yml
+docker-compose.override.yml
+.dockerignore
+
+### Test Results ###
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+### Compiler Cache ###
+__pycache__/
+*.pyc
+
+### Misc ###
+*~
+*.swp
+*.swo
+*.bak
+*.cache
+*.orig
+*_backup
+*.dotCover
+*.pid
+*.lcov
+*.lcov.info
+!appsettings.example.json
